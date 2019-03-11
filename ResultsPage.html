@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OVERTIME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/overtime_logo_light.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="support.html">الدعم الفني</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الاسعار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">English</a>
+                    </li>
+                </ul>
+                <div class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        باحث عن وظيفة
+                        <img class="img-drob" src="Images/Icons/male_icon.png" alt="">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="porofile.html">الحساب الشخصي</a>
+                        <a class="dropdown-item" href="massge.html"> الرسائل</a>
+                        <a class="dropdown-item" href="generalinfo.html">الاعدادات</a>
+                        <a class="dropdown-item" href="Favorite.html">المفضلة</a>
+                        <a class="dropdown-item" href="index.html"> خروج</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Page Result -->
+    <section class="result">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="box-serch">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="input-serch">
+                                    <input class="btn-block" type="text" placeholder="كلمات البحث">
+                                    <i class="fa fa-search"></i>
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p>السيرة الذاتية</p>
+                                    <label class="radio">
+                                        <input type="radio" name="type" checked>
+                                        <span>الكل</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="type">
+                                        <span>السيرة الذاتية</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p>الجنس</p>
+                                    <label class="radio">
+                                        <input type="radio" name="type" checked>
+                                        <span>ذكر</span>
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="type">
+                                        <span>أنثي</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p>الدولة</p>
+                                    <select class="btn-block" name="" id="">
+                                        <option>الكل</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p>المهن</p>
+                                    <select class="btn-block" name="" id="">
+                                        <option>الكل</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p>المهن</p>
+                                    <select class="btn-block" name="" id="">
+                                        <option>الكل</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p>الفئة العمرية</p>
+                                    <select class="btn-block" name="" id="">
+                                        <option>الكل</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <p class="p-h">سعر الساعة</p>
+                                    <div class="input-price">
+                                        <label>
+                                            <input class="am am1" type="text" id="amount1" readonly style=" color:#f6931f; ">
+                                        </label>
+                                        <label>
+                                            <input class="am am2" type="text" id="amount2" readonly style="color:#f6931f;">
+                                        </label>
+
+                                    </div>
+                                    <div id="slider-range"></div>
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-filter">
+                                    <button class="btn btn-block">
+                                        بحث
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="user-info">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="serch-rs">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-12  text-lg-right text-center">
+                                            <h2>نتائج البحث</h2>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-12 text-lg-right text-center mb-2">
+                                                    <h3>ترتيب بواسطة</h3>
+                                                </div>
+                                                <div class="col-lg-8 col-md-12">
+                                                    <div class="box-filter">
+
+                                                        <label class="radio">
+                                                            <input type="radio" name="type" checked>
+                                                            <span>الكل</span>
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio" name="type">
+                                                            <span>السيرة الذاتية</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-user">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="box1">
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <div class="row">
+                                                            <div class="col-2 mx-auto">
+                                                                <img class="p-user" src="Images/Icons/male_icon.png"
+                                                                    alt="">
+                                                            </div>
+                                                            <div class="col-lg-10 text-center text-lg-right">
+                                                                <h2 class="name">محمد احمد</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 mr-auto">
+                                                        <div class="row">
+                                                            <div class="col-4 ">
+                                                                <div class="icon-img"><a href="#"><img src="Images/Icons/download_icon.png"
+                                                                            alt=""></a></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="icon-img"><a href="#"><img src="Images/Icons/fav_icon.png"
+                                                                            alt=""></a></div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="icon-img" data-toggle="modal" data-target="#modelMsg"><a
+                                                                        href="#"><img src="Images/Icons/message_icon.png"
+                                                                            alt=""></a></div>
+
+                                                                <!-- Modal msg-->
+                                                                <div class="modal fade" id="modelMsg" tabindex="-1"
+                                                                    role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog modal-dialog-centered"
+                                                                        role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title text-center" id="exampleModalCenterTitle">
+                                                                                    لوريم ايبسوم </h5>
+                                                                            </div>
+                                                                            <div class="modal-body">
+
+                                                                                <input class="btn-block" type="text"
+                                                                                    placeholder="عنوان الرسالة">
+                                                                                <textarea class="btn-block" placeholder="اترك رسالتك هنا"></textarea>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn">تقييم</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Modal msg-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <div class="box2">
+                                                        <div class="row">
+                                                            <div class="col-12 text-lg-right text-center mb-2">
+                                                                <div class="row">
+                                                                    <div class="col-lg-1">
+                                                                        <i class="fa fa-phone"></i>
+                                                                    </div>
+                                                                    <div class=" col-lg-10">
+                                                                        <span>+4151643123</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 text-lg-right text-center mb-2">
+                                                                <div class="row">
+                                                                    <div class="col-lg-1">
+                                                                        <i class="fa fa-globe"></i>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <span>الأردن - عمّان</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 text-lg-right text-center mb-2">
+                                                                <div class="row">
+                                                                    <div class="col-lg-1">
+                                                                        <i class="fa fa-calendar-o"></i>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <span>32 عام</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="box2">
+                                                        <div class="row">
+                                                            <div class="col-12 text-lg-right text-center mb-2">
+                                                                <div class="row">
+                                                                    <div class="col-lg-1 ">
+                                                                        <i class="fa fa-graduation-cap"></i>
+                                                                    </div>
+                                                                    <div class=" col-lg-10">
+                                                                        <span>+4151643123</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 text-lg-right text-center mb-2">
+                                                                <div class="row">
+                                                                    <div class="col-lg-1">
+                                                                        <i class="fa fa-circle fa-lg"></i>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <span>الأردن - عمّان</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 text-lg-right text-center mb-2">
+                                                                <div class="row">
+                                                                    <div class="col-lg-1">
+                                                                        <i class="fa fa-code-fork fa-lg"></i>
+                                                                    </div>
+                                                                    <div class="col-lg-10">
+                                                                        <span>32 عام</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="box2">
+                                                        <div class="row">
+                                                            <div class="col-12 text-center text-lg-right">
+                                                                <h3>سعر الساعة : 130 ر.س</h3>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <ul class=" list-unstyled">
+                                                                    <li>
+                                                                        <i class="fa fa-star check"></i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fa fa-star check"></i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fa fa-star check"></i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fa fa-star uncheck"></i>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fa fa-star uncheck"></i>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                    <div class="box-user">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="box1">
+                                                    <div class="row">
+                                                        <div class="col-lg-8">
+                                                            <div class="row">
+                                                                <div class="col-2 mx-auto">
+                                                                    <img class="p-user" src="Images/Icons/male_icon.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="col-lg-10 text-center text-lg-right">
+                                                                    <h2 class="name">محمد احمد</h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 mr-auto">
+                                                            <div class="row">
+                                                                <div class="col-4 ">
+                                                                    <div class="icon-img"><a href="#"><img src="Images/Icons/download_icon.png"
+                                                                                alt=""></a></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <div class="icon-img"><a href="#"><img src="Images/Icons/fav_icon.png"
+                                                                                alt=""></a></div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <div class="icon-img" data-toggle="modal" data-target="#modelMsg"><a
+                                                                            href="#"><img src="Images/Icons/message_icon.png"
+                                                                                alt=""></a></div>
+    
+                                                                    <!-- Modal msg-->
+                                                                    <div class="modal fade" id="modelMsg" tabindex="-1"
+                                                                        role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered"
+                                                                            role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title text-center" id="exampleModalCenterTitle">
+                                                                                        لوريم ايبسوم </h5>
+                                                                                </div>
+                                                                                <div class="modal-body">
+    
+                                                                                    <input class="btn-block" type="text"
+                                                                                        placeholder="عنوان الرسالة">
+                                                                                    <textarea class="btn-block" placeholder="اترك رسالتك هنا"></textarea>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn">تقييم</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Modal msg-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="box2">
+                                                            <div class="row">
+                                                                <div class="col-12 text-lg-right text-center mb-2">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-1">
+                                                                            <i class="fa fa-phone"></i>
+                                                                        </div>
+                                                                        <div class=" col-lg-10">
+                                                                            <span>+4151643123</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 text-lg-right text-center mb-2">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-1">
+                                                                            <i class="fa fa-globe"></i>
+                                                                        </div>
+                                                                        <div class="col-lg-10">
+                                                                            <span>الأردن - عمّان</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 text-lg-right text-center mb-2">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-1">
+                                                                            <i class="fa fa-calendar-o"></i>
+                                                                        </div>
+                                                                        <div class="col-lg-10">
+                                                                            <span>32 عام</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="box2">
+                                                            <div class="row">
+                                                                <div class="col-12 text-lg-right text-center mb-2">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-1 ">
+                                                                            <i class="fa fa-graduation-cap"></i>
+                                                                        </div>
+                                                                        <div class=" col-lg-10">
+                                                                            <span>+4151643123</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 text-lg-right text-center mb-2">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-1">
+                                                                            <i class="fa fa-circle fa-lg"></i>
+                                                                        </div>
+                                                                        <div class="col-lg-10">
+                                                                            <span>الأردن - عمّان</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 text-lg-right text-center mb-2">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-1">
+                                                                            <i class="fa fa-code-fork fa-lg"></i>
+                                                                        </div>
+                                                                        <div class="col-lg-10">
+                                                                            <span>32 عام</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="box2">
+                                                            <div class="row">
+                                                                <div class="col-12 text-center text-lg-right">
+                                                                    <h3>سعر الساعة : 130 ر.س</h3>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <ul class=" list-unstyled">
+                                                                        <li>
+                                                                            <i class="fa fa-star check"></i>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-star check"></i>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-star check"></i>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-star uncheck"></i>
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-star uncheck"></i>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                        <div class="box-user">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="box1">
+                                                        <div class="row">
+                                                            <div class="col-lg-8">
+                                                                <div class="row">
+                                                                    <div class="col-2 mx-auto">
+                                                                        <img class="p-user" src="Images/Icons/male_icon.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div class="col-lg-10 text-center text-lg-right">
+                                                                        <h2 class="name">محمد احمد</h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 mr-auto">
+                                                                <div class="row">
+                                                                    <div class="col-4 ">
+                                                                        <div class="icon-img"><a href="#"><img src="Images/Icons/download_icon.png"
+                                                                                    alt=""></a></div>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <div class="icon-img"><a href="#"><img src="Images/Icons/fav_icon.png"
+                                                                                    alt=""></a></div>
+                                                                    </div>
+                                                                    <div class="col-4">
+                                                                        <div class="icon-img" data-toggle="modal" data-target="#modelMsg"><a
+                                                                                href="#"><img src="Images/Icons/message_icon.png"
+                                                                                    alt=""></a></div>
+        
+                                                                        <!-- Modal msg-->
+                                                                        <div class="modal fade" id="modelMsg" tabindex="-1"
+                                                                            role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                                            aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-centered"
+                                                                                role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title text-center" id="exampleModalCenterTitle">
+                                                                                            لوريم ايبسوم </h5>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+        
+                                                                                        <input class="btn-block" type="text"
+                                                                                            placeholder="عنوان الرسالة">
+                                                                                        <textarea class="btn-block" placeholder="اترك رسالتك هنا"></textarea>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn">تقييم</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Modal msg-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="box2">
+                                                                <div class="row">
+                                                                    <div class="col-12 text-lg-right text-center mb-2">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-1">
+                                                                                <i class="fa fa-phone"></i>
+                                                                            </div>
+                                                                            <div class=" col-lg-10">
+                                                                                <span>+4151643123</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 text-lg-right text-center mb-2">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-1">
+                                                                                <i class="fa fa-globe"></i>
+                                                                            </div>
+                                                                            <div class="col-lg-10">
+                                                                                <span>الأردن - عمّان</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 text-lg-right text-center mb-2">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-1">
+                                                                                <i class="fa fa-calendar-o"></i>
+                                                                            </div>
+                                                                            <div class="col-lg-10">
+                                                                                <span>32 عام</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="box2">
+                                                                <div class="row">
+                                                                    <div class="col-12 text-lg-right text-center mb-2">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-1 ">
+                                                                                <i class="fa fa-graduation-cap"></i>
+                                                                            </div>
+                                                                            <div class=" col-lg-10">
+                                                                                <span>+4151643123</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 text-lg-right text-center mb-2">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-1">
+                                                                                <i class="fa fa-circle fa-lg"></i>
+                                                                            </div>
+                                                                            <div class="col-lg-10">
+                                                                                <span>الأردن - عمّان</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 text-lg-right text-center mb-2">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-1">
+                                                                                <i class="fa fa-code-fork fa-lg"></i>
+                                                                            </div>
+                                                                            <div class="col-lg-10">
+                                                                                <span>32 عام</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="box2">
+                                                                <div class="row">
+                                                                    <div class="col-12 text-center text-lg-right">
+                                                                        <h3>سعر الساعة : 130 ر.س</h3>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <ul class=" list-unstyled">
+                                                                            <li>
+                                                                                <i class="fa fa-star check"></i>
+                                                                            </li>
+                                                                            <li>
+                                                                                <i class="fa fa-star check"></i>
+                                                                            </li>
+                                                                            <li>
+                                                                                <i class="fa fa-star check"></i>
+                                                                            </li>
+                                                                            <li>
+                                                                                <i class="fa fa-star uncheck"></i>
+                                                                            </li>
+                                                                            <li>
+                                                                                <i class="fa fa-star uncheck"></i>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Page Result -->
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="logo-footer">
+                        <img src="Images/overtime_logo_light.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="#">الشروط و الاحكام</a></li>
+                        <li><a href="signup.html">التسجيل</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">سياسة التعامل</a></li>
+                        <li><a href="#">الحماية و الخصوصية</a></li>
+                        <li><a href="#">الابلاغ عن مشكلة</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

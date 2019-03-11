@@ -1,0 +1,222 @@
+.signup {
+    min-height: 909px;
+    background: url(../Images/signup.jpg) center center no-repeat;
+    background-position: cover;
+    padding-top: 84px;
+
+    h2 {
+        @extend %head-text;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    form {
+
+        .box-input {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: auto;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]+span:after {
+            content: url(../Images/Icons/radio_empty.png);
+        }
+
+        input[type="radio"]:checked+span:after {
+            content: url(../Images/Icons/radio_selected.png);
+
+        }
+
+        input[type="radio"]:checked .box-input {
+            border-color: red !important;
+        }
+
+        input[type="email"],
+        input[type="text"] {
+            @extend %input;
+            margin-bottom: 20px;
+        }
+
+        select {
+            @extend %select;
+        }
+
+        .btn-new {
+            height: 50px;
+            color: $color3;
+            border: 1px solid $color3;
+            font-size: $font21;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            line-height: 40px;
+            position: relative;
+            z-index: 999;
+            overflow: hidden;
+
+            &:hover {
+                color: $color3;
+
+                &:before {
+                    right: 0%;
+                }
+
+                &:after {
+                    left: 0%;
+                }
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #eee;
+                border: none;
+                position: absolute;
+                top: 0%;
+                right: -100%;
+                @extend %trans;
+                z-index: -1;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #eee;
+                border: none;
+                position: absolute;
+                top: 0%;
+                left: -100%;
+                @extend %trans;
+                z-index: -1;
+            }
+
+        }
+
+        .btn-signin {
+            @extend %btn1;
+            line-height: 40px;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+//Start page sign in
+.signin,
+.forgetpass {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: url(../Images/login.jpg)center center no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+
+    h2 {
+        @extend %head-text;
+        margin-bottom: 27px;
+                text-align: center;
+    }
+
+    p {
+        color: $main-color;
+        font-size: $font28;
+        margin-bottom: 32px;    }
+
+    form {
+        input {
+            @extend %input;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: $main-color;
+            margin-bottom: 15px;
+        }
+
+        .rem {
+            font-size: $font21;
+            color: $main-color;
+            margin-top: 26px;
+        }
+
+        .btn-new {
+            height: 50px;
+            color: $color3;
+            border: 1px solid $color3;
+            font-size: $font21;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            line-height: 40px;
+            position: relative;
+            z-index: 999;
+            overflow: hidden;
+
+            &:hover {
+                color: $color3;
+
+                &:before {
+                    right: 0%;
+                }
+
+                &:after {
+                    left: 0%;
+                }
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #eee;
+                border: none;
+                position: absolute;
+                top: 0%;
+                right: -100%;
+                @extend %trans;
+                z-index: -1;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #eee;
+                border: none;
+                position: absolute;
+                top: 0%;
+                left: -100%;
+                @extend %trans;
+                z-index: -1;
+            }
+
+        }
+
+        .btn-signin {
+            @extend %btn1;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.forgetpass {
+    padding-top: 156px;
+    background: url(../Images/forget_password.jpg)center center no-repeat;
+    background-size: cover;
+}

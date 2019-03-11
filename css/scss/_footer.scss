@@ -1,0 +1,48 @@
+footer {
+    background-color: #003580;
+    // margin-top: 60px;
+    padding-top: 51px;
+    padding-bottom: 51px;
+    color: #fff;
+
+    ul {
+        margin-bottom: 30px;
+        li {
+            margin-bottom: 15px;
+
+            a {
+                font-size: $font21;
+                color: #AEAEAE;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+.logo-footer{
+    margin-bottom: 20px;
+    padding-top: 30px;
+    position: relative;
+    &:before{
+        content: '';
+        width: 2px;
+        height: 168%;
+        background-color: #fff;
+        position: absolute;
+        top: -14px;
+        left: 0;
+    }
+   
+}
+    .whatsapp {
+        padding-top: 52px;
+        img {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        p {
+            display: inline-block;
+        }
+    }
+}

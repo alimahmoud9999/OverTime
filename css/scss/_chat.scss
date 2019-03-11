@@ -1,0 +1,93 @@
+.msg{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .msg1{
+        min-height: 500px;
+        border: 1px solid #AEAEAE;
+        .head-msg{
+            color: $color3;
+            font-size: $font18;
+            text-align: center;
+            border-bottom: 1px solid #AEAEAE;
+        }
+        .box-ms{
+            margin-top: 20px;
+            padding: 15px 0 15px 0;
+            cursor: pointer;
+      
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            h3{
+                font-size: 17px;
+                color: $color2;
+            }
+            h4{
+                font-size: $font18;
+            }
+            span{
+                color: $color1;
+            }
+            @extend %trans;
+            &:hover{
+                background-color: #FEF7E8;
+            }
+        }
+        .active{
+            background-color: #eee;
+        }
+    }
+    .msg2{
+        min-height: 698px;
+        border: 1px solid #AEAEAE;
+        position: relative;
+        .head-msg{
+            color: $color2;
+            font-size: $font18;
+            text-align: center;
+            border-bottom: 1px solid #AEAEAE;
+        }
+        .send{
+            margin-top: 20px;
+            padding-right: 15px;
+            img{
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+            }
+            p{
+                display: inline-block;
+                background-color: #F9CFD6;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+        .resv{
+            direction: ltr;
+            text-align: left;
+            img{
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+            }
+            p{
+                display: inline-block;
+                background-color: #FEF7E8;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+   
+    }
+    textarea{
+        resize: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: 1px solid #AEAEAE;
+        height: 60px;
+        padding-top: 15px;
+        text-indent: 15px;
+    }
+}

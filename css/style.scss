@@ -1,0 +1,45 @@
+/*
+Tamplet name : Cv 
+coder name Ali mahmoud
+start Date 10/10/2018
+Start Time 1 PM
+*/
+//import files scss 
+@import 'scss/vars';
+@import 'scss/component';
+
+/*iMPORT FONT*/
+@font-face {
+    font-family: 'Hacen';
+    src: url('../fonts/Hacen Saudi Arabia.ttf') format('truetype');
+}
+a{
+    color: $main-color; 
+    outline: none;
+    &:hover{
+        color: $main-color; 
+        outline: none;
+        text-decoration: none;
+    }
+}
+body {
+    font-family: Hacen !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+}
+
+@import 'scss/navbar';
+@import 'scss/home';
+@import 'scss/footer';
+@import 'scss/country';
+@import 'scss/signup';
+@import 'scss/desire';
+@import 'scss/_profile';
+@import 'scss/chat';
+@import 'scss/support';
+@import 'scss/resultspage';

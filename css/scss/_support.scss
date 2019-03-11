@@ -1,0 +1,11 @@
+.support{
+    background: url(../Images/support.jpg) center center no-repeat;
+    background-size: cover;
+    textarea{
+        resize: none;
+        @extend %input;
+        height: 152px;
+        padding-top: 15px;
+        margin-bottom: 20px;
+    }
+}

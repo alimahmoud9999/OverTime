@@ -1,0 +1,213 @@
+.desire {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .tabs {
+        @extend %shadow;
+        margin-bottom: 30px;
+
+        ul {
+            li {
+                padding: 10px 0 10px;
+                margin-bottom: 30px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #FEF7E8;
+                }
+
+                a {
+                    padding-right: 25px;
+                    font-size: $font21;
+                }
+            }
+
+            .active {
+                border-right: 4px solid $color2;
+                background-color: #FEF7E8;
+
+                a {
+                    color: $color2;
+                }
+            }
+        }
+    }
+
+    h2 {
+        color: $color2;
+        font-size: 21px;
+        margin-bottom: 70px;
+        padding-top: 17px;
+    }
+
+    .btn-save {
+        @extend %btn1;
+        width: 160px;
+    }
+
+    .btn-new {
+        @extend %btn2;
+        width: 48px;
+        margin-left: 20px;
+    }
+
+    form {
+        p {
+            color: $main-color;
+            font-size: $font18;
+            margin-bottom: 17px;
+        }
+
+        select {
+            @extend %select;
+            margin-bottom: 30px;
+        }
+
+        input {
+            @extend %input;
+            margin-bottom: 30px;
+        }
+
+        .radio {
+            float: right;
+            width: calc(100% / 2);
+            margin-bottom: 30px;
+
+            // span{             
+            // border-radius: 10px; 
+            // }
+            input[type="radio"] {
+                display: none;
+            }
+
+            input[type="radio"]+span {
+                display: block;
+                width: 100%;
+                height: 40px;
+                border: 1px solid $color2;
+                text-align: center;
+                line-height: 40px;
+                color: $color2;
+                font-size: $font18;
+                cursor: pointer;
+
+            }
+
+            input[type="radio"]:checked+span {
+                background-color: $color2;
+                color: #fff;
+            }
+        }
+
+        .radio2 {
+            width: 100%;
+
+            input[type="radio"] {
+                display: none;
+            }
+
+            input[type="radio"]+span {
+                text-align: center;
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                border-radius: 5px;
+                border: 1px solid $main-color;
+                position: relative;
+                cursor: pointer;
+            }
+
+            input[type="radio"]+span:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: $color1;
+                top: 13px;
+                right: 20px;
+            }
+
+            input[type="radio"]+span:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: #fff;
+                top: 18px;
+                right: 7%;
+            }
+
+            input[type="radio"]:checked+span {
+                color: $color2;
+                border-color: $color2;
+            }
+
+            input[type="radio"]:checked+span:before {
+                background-color: $color2;
+            }
+        }
+
+        .check {
+            width: 100%;
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            input[type="checkbox"]+span {
+                display: block;
+                height: 40px;
+                border: 1px solid $color2;
+                border-radius: 5px;
+                line-height: 40px;
+                text-align: center;
+                cursor: pointer;
+                color: $color2;
+                font-size: $font18;
+            }
+
+            input[type="checkbox"]:checked+span {
+                background-color: $color2;
+                color: #fff;
+            }
+        }
+        .file{
+            width: 100%;
+            input[type="file"]{
+                display: none;
+            }
+            span{
+                display: block;
+                height: 50px;
+                border: 1px solid $color1;
+                line-height: 50px;
+                font-size: $font18;
+                cursor: pointer;
+                img{
+                    margin-right: 15px;
+                    margin-left: 20px;
+                }
+            }
+        }
+        i{
+            color: $color1;
+            cursor: pointer;
+        }
+        textarea {
+            resize: none;
+            text-indent: 15px;
+            padding-top: 10px;
+            color: $main-color;
+            border: 1px solid $main-color;
+            height: 239px;
+            border-radius: 5px;
+        }
+        .remm{
+            color: $color3;
+            font-size: $font18;
+        }
+    }
+}
